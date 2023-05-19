@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { WeatherDataService } from './services/weather-data.service';
 
 @Component({
@@ -7,12 +7,8 @@ import { WeatherDataService } from './services/weather-data.service';
   styleUrls: ['./app.component.scss']
 })
 
-export class AppComponent implements OnInit{
+export class AppComponent{
 
   constructor(private weatherDataService: WeatherDataService) { }
-
-  ngOnInit() {
-    this.weatherDataService.ngOnInit();
-  }
 
 }

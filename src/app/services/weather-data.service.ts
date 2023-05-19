@@ -1,26 +1,33 @@
-import { Injectable, OnInit } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { myWeather } from '../models/weather.model';
+
 
 @Injectable({
   providedIn: 'root'
 })
-export class WeatherDataService implements OnInit {
+
+export class WeatherDataService {
+
+  myWeather: myWeather;
 
   constructor(private http: HttpClient) { }
 
-  ngOnInit() {
 
-    // API-CALL:
-
-    let headers = new HttpHeaders({
-      'X-RapidAPI-Key': 'fd5c96f098msh7284ebaad2d33ffp1a3db6jsneca51da7a76c',
-      'X-RapidAPI-Host': 'open-weather13.p.rapidapi.com'
-    });
+  getWeatherData(cityName: string) {
 
     this.http
-    .get('https://open-weather13.p.rapidapi.com/city/Ludwigsburg', {headers: headers})
-    .subscribe(weatherData => {
-      console.log(weatherData);
-    })
+      .get<myWeather>(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=50d3840fffb1eaee4ef1e7f8dcada229&lang=de&units=metric`)
+      .subscribe({
+        
+        next: (res) => {
+          this.myWeather = res;
+          console.log(this.myWeather)
+        },
+
+        error: (error) => console.log(error.message),
+
+        complete: () => console.info('API call completed')
+      })
   }
 }
