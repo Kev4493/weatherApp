@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MainScreenComponent } from './components/main-screen/main-screen.component';
+import { SearchScreenComponent } from './components/search-screen/search-screen.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainScreenComponent
+    MainScreenComponent,
+    SearchScreenComponent
   ],
 
   imports: [
