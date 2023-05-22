@@ -12,7 +12,7 @@ export class MainScreenComponent implements OnInit {
   constructor(public weatherData: WeatherDataService) {}
 
   ngOnInit(): void {
-    this.weatherData.getWeatherData('Ludwigsburg')
+    this.weatherData.getWeatherData('Heilbron')
   }
   
 }

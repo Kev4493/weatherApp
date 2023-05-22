@@ -4,6 +4,7 @@
     background-color: #1E213A;
 
     .header {
+        padding-top: 2rem;
         height: 5rem;
         display: flex;
         justify-content: center;
@@ -11,6 +12,27 @@
 
         .mat-success {
             background-color: #6E707A;
+        }
+    }
+
+    .weather-img-cnt {
+        // border: 1px solid white;
+        margin-top: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .weather-img {
+            margin-left: -38px;
+        }
+
+        .weather-description {
+            margin-top: 2rem;
+            color: #6E707A;
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 0;
         }
     }
 }

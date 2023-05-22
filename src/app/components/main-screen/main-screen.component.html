@@ -2,5 +2,12 @@
     <div class="header">
         <button routerLink="/search" mat-raised-button color="success">Search for Places</button>
     </div>
+    <div class="weather-img-cnt">
+        <!-- <img class="weather-img" src="../../../assets/img/LightRain.png" alt=""> -->
+        <!-- <img src="https://openweathermap.org/img/wn/{{this.weatherData.myWeather?.weather[0].icon}}@2x.png" alt=""> -->
+        <img class="weather-img" src="../../../assets/img/{{this.weatherData.myWeather?.weather[0].main}}.png" alt="">
+        <!-- <p class="weather-description">{{this.weatherData.myWeather?.weather[0].main}}</p> -->
+        <p class="weather-description">{{this.weatherData.myWeather?.weather[0].description}}</p>
+    </div>
     
 </div>
