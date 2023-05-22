@@ -8,5 +8,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        .mat-success {
+            background-color: #6E707A;
+        }
     }
 }

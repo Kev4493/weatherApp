@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MainScreenComponent } from './components/main-screen/main-screen.component';
 import { SearchScreenComponent } from './components/search-screen/search-screen.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -17,9 +19,11 @@ import { SearchScreenComponent } from './components/search-screen/search-screen.
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
   ],
-  
+
   providers: [],
   bootstrap: [AppComponent]
 })
