@@ -12,7 +12,11 @@ export class MainScreenComponent implements OnInit {
   constructor(public weatherData: WeatherDataService) {}
 
   ngOnInit(): void {
-    this.weatherData.getWeatherData('Heilbron')
+    this.weatherData.getWeatherData('Möglingen');
+  }
+
+  roundDecimal(decimal) {
+    return Math.round(decimal);
   }
   
 }

@@ -35,4 +35,28 @@
             margin-bottom: 0;
         }
     }
+
+    .temperature-cnt {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 6rem;
+        
+        
+        .temperature {
+            color: whitesmoke;
+            font-size: 5rem;
+        }
+
+        .h-t {
+            margin-top: 2rem;
+            color: #6E707A;
+            font-size: 1rem;
+        }
+
+        .min-temp {
+            margin-left: 1rem;
+        }
+    }
 }
