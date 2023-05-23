@@ -8,6 +8,8 @@ import { MainScreenComponent } from './components/main-screen/main-screen.compon
 import { SearchScreenComponent } from './components/search-screen/search-screen.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
+import { DatePipe } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { MatButtonModule } from '@angular/material/button';
     HttpClientModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    DatePipe,
+    MatIconModule
   ],
 
   providers: [],
