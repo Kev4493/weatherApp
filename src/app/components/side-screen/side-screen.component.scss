@@ -3,4 +3,27 @@
     background-color: #0f0d1c;
     height: 100vh;
     padding: 2rem;
+
+    .temp-unit-cnt {
+        border: 1px solid white;
+        display: flex;
+        justify-content: flex-end;
+
+        .circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+
+            &:first-child {
+                margin-right: 1rem;
+            }
+        }
+    }
 }
