@@ -10,12 +10,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { DatePipe } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
+import { SideScreenComponent } from './components/side-screen/side-screen.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainScreenComponent,
-    SearchScreenComponent
+    SearchScreenComponent,
+    SideScreenComponent
   ],
 
   imports: [
