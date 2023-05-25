@@ -5,6 +5,7 @@
     padding: 2rem;
     display: flex;
     flex-direction: column;
+    position: relative;
 
     .header {
         // padding-top: 2rem;
@@ -15,84 +16,97 @@
 
         .mat-success {
             background-color: #6E707A;
+            color: whitesmoke;
         }
     }
 
-    .body {
+
+    .weather-img-cnt {
+        // border: 1px solid white;
+        margin-top: 4rem;
         display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
 
-        .weather-img-cnt {
-            // border: 1px solid white;
-            // margin-top: 4rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-
-            .weather-img {
-                margin-left: -38px;
-            }
-
-            .weather-description {
-                // margin-top: 2rem;
-                color: #6E707A;
-                font-size: 1.5rem;
-                text-align: center;
-                margin-bottom: 0;
-            }
+        .weather-img {
+            margin-left: -38px;
         }
 
-        .temperature-cnt {
-            display: flex;
-            // justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            // margin-top: 6rem;
-
-            .temperature {
-                color: whitesmoke;
-                font-size: 5rem;
-                margin: 0;
-            }
-
-            .h-t {
-                margin-top: 2rem;
-                color: #6E707A;
-                font-size: 1rem;
-            }
-
-            .min-temp {
-                margin-left: 1rem;
-            }
-        }
-
-        .current-date-cnt {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .weather-description {
+            margin-top: 2rem;
             color: #6E707A;
-
-            .current-date {
-                font-size: 1rem;
-                margin: 0;
-            }
-        }
-
-        .current-location-cnt {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #6E707A;
-
-            .location {
-                margin: 0;
-                display: flex;
-                align-items: center;
-            }
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 0;
         }
     }
+
+    .temperature-cnt {
+        display: flex;
+        // justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 6rem;
+        height: auto;
+
+        .temperature {
+            color: whitesmoke;
+            font-size: 8rem;
+            font-weight: 500;
+            margin: 0;
+            height: 7rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .h-t {
+            margin-top: 2rem;
+            color: #6E707A;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .min-temp {
+            margin-left: 1rem;
+        }
+    }
+
+    .current-date-cnt {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #6E707A;
+        position: absolute;
+        bottom: 6rem;
+        left: 0;
+        right: 0;
+
+        .current-date {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 0;
+        }
+    }
+
+    .current-location-cnt {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #6E707A;
+        position: absolute;
+        bottom: 2rem;
+        left: 0;
+        right: 0;
+
+        .location {
+            margin: 0;
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+        }
+    }
+
 
 }

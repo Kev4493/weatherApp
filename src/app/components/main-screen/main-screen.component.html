@@ -4,26 +4,23 @@
         <button routerLink="/search" mat-raised-button color="success">Search for Places</button>
     </div>
 
-    <div class="body">
-        <div class="weather-img-cnt">
-            <img class="weather-img" src="../../../assets/img/{{this.weatherData.myWeather?.weather[0].main}}.png" alt="">
-            <p class="weather-description">{{this.weatherData.myWeather?.weather[0].description}}</p>
-        </div>
-    
-        <div class="temperature-cnt">
-            <div class="temperature">{{this.roundDecimal(this.weatherData.myWeather?.main.temp)}}°</div>
-            <p class="h-t"><span>H: {{this.roundDecimal(this.weatherData.myWeather?.main.temp_max)}}°</span><span class="min-temp">T: {{this.roundDecimal(this.weatherData.myWeather?.main.temp_min)}}°</span></p>
-        </div>
-    
-        <div class="current-date-cnt">
-            <p class="current-date">{{this.formattedDate}}</p>
-        </div>
-    
-        <div class="current-location-cnt">
-            <p class="location"><mat-icon fontIcon="location_on"></mat-icon><span>{{this.weatherData.myWeather?.name}}</span></p>
-        </div>
+
+    <div class="weather-img-cnt">
+        <img class="weather-img" src="../../../assets/img/{{this.weatherData.myWeather?.weather[0].main}}.png" alt="">
+        <p class="weather-description">{{this.weatherData.myWeather?.weather[0].description}}</p>
     </div>
 
+    <div class="temperature-cnt">
+        <p class="temperature">{{this.roundDecimal(this.weatherData.myWeather?.main.temp)}}°</p>
+        <p class="h-t"><span>H: {{this.roundDecimal(this.weatherData.myWeather?.main.temp_max)}}°</span><span class="min-temp">T: {{this.roundDecimal(this.weatherData.myWeather?.main.temp_min)}}°</span></p>
+    </div>
 
-    
+    <div class="current-date-cnt">
+            <p class="current-date">{{this.formattedDate}}</p>
+        </div>
+
+    <div class="current-location-cnt">
+            <p class="location"><mat-icon fontIcon="location_on"></mat-icon><span>{{this.weatherData.myWeather?.name}}</span></p>
+        </div>
+
 </div>

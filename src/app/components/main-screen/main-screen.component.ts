@@ -17,7 +17,7 @@ export class MainScreenComponent implements OnInit {
   constructor(public weatherData: WeatherDataService, private datePipe: DatePipe) {}
 
   ngOnInit(): void {
-    this.weatherData.getWeatherData('Möglingen');
+    this.weatherData.getWeatherData('Barcelona');
   }
 
   roundDecimal(decimal) {
