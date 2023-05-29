@@ -18,6 +18,9 @@ export class WeatherDataService {
 
     this.http
       .get<myWeather>(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=50d3840fffb1eaee4ef1e7f8dcada229&lang=de&units=metric`)
+      // .get<myWeather>(`https://api.openweathermap.org/data/2.5/forecast?lat=48.8874&lon=9.1269&appid=50d3840fffb1eaee4ef1e7f8dcada229&lang=de&units=metric`)
+      // .get<myWeather>(`https://api.openweathermap.org/data/2.5/forecast/daily?48.8874&lon=9.1269&cnt=7&appid=50d3840fffb1eaee4ef1e7f8dcada229`)
+
       .subscribe({
         
         next: (res) => {

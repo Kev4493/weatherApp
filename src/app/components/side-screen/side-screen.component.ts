@@ -7,4 +7,23 @@ import { Component } from '@angular/core';
 })
 export class SideScreenComponent {
 
+  constructor() {}
+
+  unitC = true
+
+  unitF;
+
+  changeUnitToF() {
+    if (this.unitC == true) {
+      this.unitC = false;
+      this.unitF = true;
+    }
+  }
+
+  changeUnitToC() {
+    if (this.unitF == true) {
+      this.unitF = false;
+      this.unitC = true;
+    }
+  }
 }
