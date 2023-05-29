@@ -1,6 +1,6 @@
 <div class="side-screen-cnt">
     <div class="temp-unit-cnt">
-        <div (click)="changeUnitToC()" [ngStyle]="{ 'background-color': unitC ? '#585676' : '', 'color': unitC ? 'white' : '' }" class="circle">°C</div>
-        <div (click)="changeUnitToF()" [ngStyle]="{ 'background-color': unitF ? '#585676' : '', 'color': unitF ? 'white' : '' }" class="circle">°F</div>
+        <div (click)="changeUnitToC()" [ngStyle]="{ 'background-color': this.weatherData.unitC ? 'aliceblue' : '', 'color': this.weatherData.unitC ? 'black' : '' }" class="circle">°C</div>
+        <div (click)="changeUnitToF()" [ngStyle]="{ 'background-color': this.weatherData.unitF ? 'aliceblue' : '', 'color': this.weatherData.unitF ? 'black' : '' }" class="circle">°F</div>
     </div>
 </div>

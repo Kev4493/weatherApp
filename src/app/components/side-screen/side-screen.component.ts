@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { WeatherDataService } from 'src/app/services/weather-data.service';
 
 @Component({
   selector: 'app-side-screen',
@@ -7,23 +8,26 @@ import { Component } from '@angular/core';
 })
 export class SideScreenComponent {
 
-  constructor() {}
+  constructor(public weatherData: WeatherDataService) {}
 
-  unitC = true
-
-  unitF;
 
   changeUnitToF() {
-    if (this.unitC == true) {
-      this.unitC = false;
-      this.unitF = true;
+    if (this.weatherData.unitC == true) {
+      this.weatherData.unitC = false;
+      this.weatherData.unitF = true;
+      this.weatherData.units = 'imperial'
+      this.weatherData.getWeatherData('Stuttgart')
     }
   }
 
+  
   changeUnitToC() {
-    if (this.unitF == true) {
-      this.unitF = false;
-      this.unitC = true;
+    if (this.weatherData.unitF == true) {
+      this.weatherData.unitF = false;
+      this.weatherData.unitC = true;
+      this.weatherData.units = 'metric'
+      this.weatherData.getWeatherData('Stuttgart')
     }
   }
+
 }
