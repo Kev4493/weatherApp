@@ -11,17 +11,22 @@ export class WeatherDataService {
 
   myWeather: myWeather;
 
+  weatherForecast;
+
   units = 'metric';
 
   unitC = true
 
   unitF;
 
+  lat;
+
+  lon;
+
   constructor(private http: HttpClient) { }
 
 
   getWeatherData(cityName: string) {
-
     this.http
       .get<myWeather>(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=50d3840fffb1eaee4ef1e7f8dcada229&lang=de&units=${this.units}`)
 
@@ -29,11 +34,29 @@ export class WeatherDataService {
         
         next: (res) => {
           this.myWeather = res;
-          console.log(this.myWeather)
+          this.lat = this.myWeather.coord.lat
+          this.lon = this.myWeather.coord.lon
+          console.log('current weatherdata: ', this.myWeather)
+          this.getWeatherForecast();
         },
 
         error: (error) => console.log(error.message),
+        complete: () => console.info('API call completed')
+      })
+  }
 
+
+  getWeatherForecast() {
+    this.http
+      .get(`https://api.openweathermap.org/data/2.5/forecast?lat=${this.lat}&lon=${this.lon}&appid=50d3840fffb1eaee4ef1e7f8dcada229&lang=de&units=${this.units}`)
+
+      .subscribe({
+        next: (res) => {
+          this.weatherForecast = res;
+          console.log('5day / 3hour forecast data:', this.weatherForecast);
+        },
+
+        error: (error) => console.log(error.message),
         complete: () => console.info('API call completed')
       })
   }

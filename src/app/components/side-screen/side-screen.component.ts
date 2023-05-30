@@ -16,7 +16,7 @@ export class SideScreenComponent {
       this.weatherData.unitC = false;
       this.weatherData.unitF = true;
       this.weatherData.units = 'imperial'
-      this.weatherData.getWeatherData('Stuttgart')
+      this.weatherData.getWeatherData('Ludwigsburg')
     }
   }
 
@@ -26,7 +26,7 @@ export class SideScreenComponent {
       this.weatherData.unitF = false;
       this.weatherData.unitC = true;
       this.weatherData.units = 'metric'
-      this.weatherData.getWeatherData('Stuttgart')
+      this.weatherData.getWeatherData('Ludwigsburg')
     }
   }
 
