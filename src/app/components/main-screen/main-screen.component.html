@@ -6,8 +6,9 @@
 
 
     <div class="weather-img-cnt">
-        <img class="weather-img" src="./assets/img/{{this.weatherData?.myWeather?.weather[0].main}}.png" alt="">
-        <p class="weather-description">{{this.weatherData.myWeather?.weather[0].description}}</p>
+        <!-- <img class="weather-img" src="./assets/img/{{this.weatherData?.myWeather?.weather[0].main}}.png" alt=""> -->
+        <img class="weather-img" src="https://openweathermap.org/img/wn/{{ this.weatherData.myWeather?.weather[0].icon}}@2x.png" alt="">
+        <p class="weather-description">{{this.weatherData.myWeather?.weather[0].description}}<p>
     </div>
 
     <div class="temperature-cnt">
