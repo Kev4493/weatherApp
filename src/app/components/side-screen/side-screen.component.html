@@ -6,9 +6,16 @@
 
     <div class="forecast-cnt">
         <div class="forecast" *ngFor="let item of this.weatherData?.weatherForecast?.list.slice(0, 5)">
-            {{ item.dt_txt }}
-            <br><br>
-            {{ item.main.temp }}
+            <div class="time">
+                {{ item.dt_txt | date:'HH:mm' }} Uhr
+            </div>
+            <div class="icon">
+                <img class="weather-img" src="./assets/img/{{item.weather[0].main}}.png" alt="">
+            </div>
+            <div class="temp">
+                {{ this.roundDecimal(item.main.temp) }}°
+            </div>
+            
         </div>
     </div>
 </div>

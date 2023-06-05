@@ -30,4 +30,8 @@ export class SideScreenComponent {
     }
   }
 
+  roundDecimal(decimal) {
+    return Math.round(decimal);
+  }
+
 }
