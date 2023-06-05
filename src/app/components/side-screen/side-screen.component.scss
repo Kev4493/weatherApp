@@ -41,6 +41,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-around;
+            border-radius: 12px;
 
             .time {
                 font-weight: 500;
@@ -60,6 +61,29 @@
             .temp {
                 font-weight: 500;
                 font-size: 16px;
+            }
+        }
+    }
+
+    .highlights-container {
+        margin-top: 2rem;
+
+        .header {
+            color: whitesmoke;
+            margin: 0;
+            font-weight: 700;
+            font-size: 24px;
+        }
+
+        .first-row-highlights {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+
+            .highlight {
+                width: 328px;
+                height: 204px;
+                background-color: #1E213A;
             }
         }
     }
