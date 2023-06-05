@@ -24,7 +24,14 @@
         <h1 class="header">Today's Highlights</h1>
 
         <div class="first-row-highlights">
-            <div class="highlight"></div>
+            <div class="highlight">
+                <div class="highlight-header">
+                    <p>Wind speed</p>
+                </div>
+                <div class="highlight-information">
+                    <p>{{ this.roundDecimal(this.weatherData.myWeather?.wind.speed) }} <span class="unit">kmh</span></p>
+                </div>
+            </div>
             <div class="highlight"></div>
         </div>
     </div>

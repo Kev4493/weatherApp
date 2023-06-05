@@ -40,7 +40,8 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-around;
+            justify-content: space-between;
+            padding: 1rem;
             border-radius: 12px;
 
             .time {
@@ -84,6 +85,42 @@
                 width: 328px;
                 height: 204px;
                 background-color: #1E213A;
+                border-radius: 12px;
+                padding: 1rem;
+
+                .highlight-header {
+
+                    p {
+                        margin: 0;
+                    }
+
+                    color: whitesmoke;
+                    font-weight: 500;
+                    font-size: 16px;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .highlight-information {
+
+                    p {
+                        margin: 0;
+                        font-weight: 700;
+                        font-size: 64px;
+
+                        .unit {
+                            font-weight: 500;
+                            font-size: 36px;
+                        }
+                    }
+                    
+                    margin-top: 2rem;
+                    display: flex;
+                    justify-content: center;
+                    color: whitesmoke;
+
+
+                }
             }
         }
     }
