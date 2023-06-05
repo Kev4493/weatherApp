@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { myWeather } from '../models/weather.model';
+import { MyWeather } from '../models/weather.model';
+import { WeatherForecast } from '../models/forecast.model';
 
 
 @Injectable({
@@ -9,26 +10,20 @@ import { myWeather } from '../models/weather.model';
 
 export class WeatherDataService {
 
-  myWeather: myWeather;
-
-  weatherForecast;
-
+  myWeather: MyWeather;
+  weatherForecast: WeatherForecast
   units = 'metric';
-
   unitC = true
-
-  unitF;
-
-  lat;
-
-  lon;
+  unitF: boolean;
+  lat: number;
+  lon: number;
 
   constructor(private http: HttpClient) { }
 
 
   getWeatherData(cityName: string) {
     this.http
-      .get<myWeather>(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=50d3840fffb1eaee4ef1e7f8dcada229&lang=de&units=${this.units}`)
+      .get<MyWeather>(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=50d3840fffb1eaee4ef1e7f8dcada229&lang=de&units=${this.units}`)
 
       .subscribe({
         
@@ -48,7 +43,7 @@ export class WeatherDataService {
 
   getWeatherForecast() {
     this.http
-      .get(`https://api.openweathermap.org/data/2.5/forecast?lat=${this.lat}&lon=${this.lon}&appid=50d3840fffb1eaee4ef1e7f8dcada229&lang=de&units=${this.units}`)
+      .get<WeatherForecast>(`https://api.openweathermap.org/data/2.5/forecast?lat=${this.lat}&lon=${this.lon}&appid=50d3840fffb1eaee4ef1e7f8dcada229&lang=de&units=${this.units}`)
 
       .subscribe({
         next: (res) => {
@@ -60,7 +55,4 @@ export class WeatherDataService {
         complete: () => console.info('API call completed')
       })
   }
-
-
-
 }

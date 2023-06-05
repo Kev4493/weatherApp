@@ -1,4 +1,4 @@
-export interface myWeather {
+export interface MyWeather {
   coord: Coord
   weather: Weather[]
   base: string

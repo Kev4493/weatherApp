@@ -26,4 +26,16 @@
             }
         }
     }
+
+    .forecast-cnt {
+        display: flex;
+        justify-content: space-between;
+
+        .forecast {
+            width: 120px;
+            height: 177px;
+            background-color: #1E213A;
+            margin-top: 2rem;
+        }
+    }
 }

@@ -3,4 +3,12 @@
         <div (click)="changeUnitToC()" [ngStyle]="{ 'background-color': this.weatherData.unitC ? 'aliceblue' : '', 'color': this.weatherData.unitC ? 'black' : '' }" class="circle">°C</div>
         <div (click)="changeUnitToF()" [ngStyle]="{ 'background-color': this.weatherData.unitF ? 'aliceblue' : '', 'color': this.weatherData.unitF ? 'black' : '' }" class="circle">°F</div>
     </div>
+
+    <div class="forecast-cnt">
+        <div class="forecast" *ngFor="let item of this.weatherData?.weatherForecast?.list.slice(0, 5)">
+            {{ item.dt_txt }}
+            <br><br>
+            {{ item.main.temp }}
+        </div>
+    </div>
 </div>
