@@ -32,7 +32,22 @@
                     <p>{{ this.roundDecimal(this.weatherData.myWeather?.wind.speed) }} <span class="unit">kmh</span></p>
                 </div>
             </div>
-            <div class="highlight"></div>
+            <div class="highlight">
+                <div class="highlight-header">
+                    <p>Humidity</p>
+                </div>
+                <div class="highlight-information">
+                    <p>{{ this.weatherData.myWeather?.main.humidity }} <span class="unit">%</span></p>
+                    <div class="progress-bar">
+                        <div class="legend">
+                            <span>0</span>
+                            <span>50</span>
+                            <span>100</span>
+                        </div>
+                        <mat-progress-bar color="success" mode="determinate" value="{{ this.weatherData.myWeather?.main.humidity }}"></mat-progress-bar>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

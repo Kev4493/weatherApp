@@ -75,3 +75,8 @@ app-main-screen {
 app-side-screen {
   width: 70%;
 }
+
+// Progress-Bar-Color:
+.mdc-linear-progress__bar-inner {
+  border-color: #FFEC65 !important;
+}

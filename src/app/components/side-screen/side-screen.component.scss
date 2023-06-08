@@ -102,25 +102,53 @@
                 }
 
                 .highlight-information {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
 
                     p {
                         margin: 0;
                         font-weight: 700;
                         font-size: 64px;
+                        height: 75px;
 
                         .unit {
                             font-weight: 500;
                             font-size: 36px;
                         }
                     }
-                    
-                    margin-top: 2rem;
+
+                    // margin-top: 2rem;
                     display: flex;
                     justify-content: center;
                     color: whitesmoke;
 
+                    .progress-bar {
+                        width: 100%;
+                        position: absolute;
+                        bottom: 2rem;
+
+                        .mat-success {
+                            background-color: #E7E7EB;
+                        }
+
+                        .legend {
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            color: #A09FB1;
+                            font-weight: 700;
+                            margin-bottom: 0.25rem;
+                            font-size: 12px;
+                        }
+                    }
 
                 }
+
+
             }
         }
     }

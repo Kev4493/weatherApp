@@ -11,6 +11,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { DatePipe } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { SideScreenComponent } from './components/side-screen/side-screen.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SideScreenComponent } from './components/side-screen/side-screen.compon
     BrowserAnimationsModule,
     MatButtonModule,
     DatePipe,
-    MatIconModule
+    MatIconModule,
+    MatProgressBarModule
   ],
 
   providers: [],
