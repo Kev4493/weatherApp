@@ -49,5 +49,26 @@
                 </div>
             </div>
         </div>
+
+        <div class="first-row-highlights">
+            <div class="highlight">
+                <div class="highlight-header">
+                    <p>Feels like</p>
+                </div>
+                <div class="highlight-information">
+                    <p>{{ this.roundDecimal(this.weatherData.myWeather?.main.feels_like) }} <span class="unit">°c</span></p>
+                </div>
+            </div>
+            <div class="highlight">
+                <div class="highlight-header">
+                    <p>Air Pressure</p>
+                </div>
+                <div class="highlight-information">
+                    <p>{{ this.weatherData.myWeather?.main.pressure }} <span class="unit">hPa</span></p>
+                </div>
+            </div>
+        </div>
+
+
     </div>
 </div>
