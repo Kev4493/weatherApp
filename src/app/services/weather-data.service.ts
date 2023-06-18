@@ -17,6 +17,8 @@ export class WeatherDataService {
   unitF: boolean;
   lat: number;
   lon: number;
+  location: any;
+  allLocations = [];
 
   constructor(private http: HttpClient) { }
 

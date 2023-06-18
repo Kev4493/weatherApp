@@ -12,6 +12,8 @@ import { DatePipe } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { SideScreenComponent } from './components/side-screen/side-screen.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatButtonModule,
     DatePipe,
     MatIconModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatInputModule,
+    FormsModule
   ],
 
   providers: [],
