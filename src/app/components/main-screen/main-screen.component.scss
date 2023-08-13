@@ -3,4 +3,83 @@
     height: 100vh;
     padding: 2rem;
     background-color: #1E213A;
+
+    .button-cnt {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+
+        button {
+            width: 160px;
+            height: 40px;
+            background-color: #6E707A;
+            color: rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+
+        .icon-circle {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: aliceblue;
+            background-color: #6E707A;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            filter: invert(100%) sepia(7%) saturate(27%) hue-rotate(254deg) brightness(107%) contrast(105%);
+            // filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+            .my-location-icon {
+                width: 20px;  
+            }
+        }
+    }
+
+    .weather-section {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        border: 1px solid white;
+        margin-top: 2rem;
+        height: 700px;
+
+        .weather-temperature-cnt {
+            p {
+                color: whitesmoke;
+            }
+        }
+
+        .weather-name-cnt {
+            p {
+                color: whitesmoke;
+            }
+        }
+    }
+
+    .footer {
+        margin-top: 2rem;
+        border: 1px solid white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .date-cnt {
+            color: whitesmoke;
+        }
+
+        .location-cnt {
+            display: flex;
+            align-items: center;
+            color: whitesmoke;
+            margin-top: 1rem;
+
+            img {
+                width: 25px;
+                filter: invert(100%) sepia(7%) saturate(27%) hue-rotate(254deg) brightness(107%) contrast(105%);
+            }
+        }
+    }
 }
