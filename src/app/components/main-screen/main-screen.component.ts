@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { WeatherDataService } from 'src/app/services/weather-data.service';
 
 @Component({
   selector: 'app-main-screen',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class MainScreenComponent {
 
+  constructor(public weatherData: WeatherDataService) { }
+
+  ngOnInit() {
+    this.weatherData.getWeatherData('Stuttgart');
+  }
 }
