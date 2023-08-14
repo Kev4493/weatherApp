@@ -10,7 +10,10 @@ export class MainScreenComponent {
 
   constructor(public weatherData: WeatherDataService) { }
 
-  ngOnInit() {
-    this.weatherData.getWeatherData('Stuttgart');
-  }
+
+  // ZUM TESTEN IN APP.COMPONENT VERSCHOBEN..
+
+  // ngOnInit() {
+  //   this.weatherData.getWeatherData('Stuttgart');
+  // }
 }
