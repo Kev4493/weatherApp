@@ -1,29 +1,34 @@
 <div class="main-screen-cnt">
-    <div class="button-cnt">
-        <button>Search for places</button>
-        <div class="icon-circle"><img class="my-location-icon" src="../../../assets/icons/my_location.png" alt=""></div>
-    </div>
+    <div class="overlay-cnt"></div>
 
-    <div class="weather-section">
-        <div class="weather-icon-cnt">
-            <!-- <img src="../../../assets/img/Thunderstorm.png" alt=""> -->
-            <img src="https://openweathermap.org/img/wn/{{weatherData.myWeather?.weather[0].icon}}@2x.png" alt="">
+    <div class="content-cnt">
+        <div class="button-cnt">
+            <button>Search for places</button>
+            <div class="icon-circle"><img class="my-location-icon" src="../../../assets/icons/my_location.png" alt=""></div>
         </div>
-        <div class="weather-temperature-cnt">
-            <p>{{weatherData.roundNumber(weatherData.myWeather?.main.temp)}}</p><span>°C</span>
+    
+        <div class="weather-section">
+            <div class="weather-icon-cnt">
+                <!-- <img src="../../../assets/img/Thunderstorm.png" alt=""> -->
+                <img src="https://openweathermap.org/img/wn/{{weatherData.myWeather?.weather[0].icon}}@2x.png" alt="">
+            </div>
+            <div class="weather-temperature-cnt">
+                <p>{{weatherData.roundNumber(weatherData.myWeather?.main.temp)}}</p><span>°C</span>
+            </div>
+            <div class="weather-name-cnt">
+                <p>{{weatherData.myWeather?.weather[0].description}}</p>
+            </div>
         </div>
-        <div class="weather-name-cnt">
-            <p>{{weatherData.myWeather?.weather[0].description}}</p>
-        </div>
-    </div>
-
-    <div class="footer">
-        <div class="date-cnt">
-            Today • So. 13 August
-        </div>
-        <div class="location-cnt">
-            <img src="../../../assets/icons/location.png" alt="">
-            <p>Stuttgart</p>
+    
+        <div class="footer">
+            <div class="date-cnt">
+                Today • So. 13 August
+            </div>
+            <div class="location-cnt">
+                <img src="../../../assets/icons/location.png" alt="">
+                <p>{{weatherData.myWeather?.name}}</p>
+            </div>
         </div>
     </div>
 </div>
+

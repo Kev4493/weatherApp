@@ -1,0 +1,21 @@
+.start-screen-cnt {
+    height: 100vh;
+    padding: 2rem;
+    background-color: #1E213A;
+
+    position: relative;
+    background-size: 601px;
+    background-repeat: no-repeat;
+    background-position: center 72px;
+    background-image: url(../../../assets/img/Cloud-background.png);
+
+
+    .overlay-cnt {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(30, 33, 58, 0.95);
+    }
+}
