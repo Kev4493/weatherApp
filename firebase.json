@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "weather_app",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

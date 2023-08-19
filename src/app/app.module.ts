@@ -7,6 +7,19 @@ import { MainScreenComponent } from './components/main-screen/main-screen.compon
 import { SideScreenComponent } from './components/side-screen/side-screen.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StartScreenComponent } from './components/start-screen/start-screen.component';
+import { SearchScreenComponent } from './components/search-screen/search-screen.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { FIREBASE_OPTIONS } from '@angular/fire/compat';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,14 +27,28 @@ import { StartScreenComponent } from './components/start-screen/start-screen.com
     MainScreenComponent,
     SideScreenComponent,
     StartScreenComponent,
+    SearchScreenComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideDatabase(() => getDatabase()),
+    provideFirestore(() => getFirestore()),
+    AngularFirestoreModule,
+    FormsModule
+
   ],
-  providers: [],
+  providers: [
+    { provide: FIREBASE_OPTIONS, useValue: environment.firebase },
+  ],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { WeatherDataService } from './services/weather-data.service';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +10,10 @@ import { WeatherDataService } from './services/weather-data.service';
 export class AppComponent {
   title = 'weather_app';
 
-  constructor(public weatherData: WeatherDataService) { }
+  constructor(public weatherData: WeatherDataService, private firestore: AngularFirestore) { }
 
   ngOnInit() {
-    this.weatherData.getWeatherData('Stuttgart');
+    this.weatherData.loadCitysFromDb();
+    this.weatherData.getWeatherData();
   }
 }

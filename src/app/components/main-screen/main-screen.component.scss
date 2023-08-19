@@ -32,7 +32,7 @@
     
     
             button {
-                width: 160px;
+                width: 200px;
                 height: 40px;
                 background-color: #6E707A;
                 color: #E7E7EB;
@@ -73,6 +73,7 @@
                 p {
                     color: #E7E7EB;
                     font-size: 140px;
+                    margin: 0;
                 }
     
                 span {
@@ -85,6 +86,7 @@
                 p {
                     color: #A09FB1;
                     font-size: 24px;
+                    margin: 0;
                 }
             }
         }
@@ -105,6 +107,10 @@
                 align-items: center;
                 color: #88869D;
                 margin-top: 2rem;
+
+                p {
+                    margin: 0;
+                }
     
                 img {
                     width: 20px;
