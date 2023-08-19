@@ -40,7 +40,7 @@
                 background-image: url(../../../assets/icons/close-icon.png);
                 background-size: 25px 25px;
                 filter: invert(57%) sepia(7%) saturate(827%) hue-rotate(206deg) brightness(94%) contrast(82%);
-              }
+            }
         }
 
         button {
@@ -58,18 +58,38 @@
         margin-top: 4rem;
 
         .history-city {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             border: 1px solid rgba(255, 255, 255, 0);
             height: 64px;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
             color: #E7E7EB;
             padding: 0 1rem 0 1rem;
             margin-bottom: 2rem;
+            cursor: pointer;
+
+            img {
+                display: none;
+            }
 
             &:hover {
                 border: 1px solid #616475;
+
+                img {
+                    display: unset;
+                    width: 25px;
+                    filter: invert(57%) sepia(7%) saturate(827%) hue-rotate(206deg) brightness(94%) contrast(82%);
+                    cursor: pointer;
+
+                    &:hover {
+                        filter: invert(57%) sepia(7%) saturate(827%) hue-rotate(206deg) brightness(165%) contrast(82%);
+                    }
+                }
+
+
             }
+
+
 
             p {
                 margin: 0;

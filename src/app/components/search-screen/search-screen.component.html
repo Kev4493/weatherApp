@@ -13,6 +13,7 @@
         <div class="ng-cnt" *ngFor="let city of weatherData.cityCollection">
             <div class="history-city" (click)="changeCity(city.cityName)">
                 <p>{{ city.cityName }}</p>
+                <img src="../../../assets/icons/close-icon.png" alt="">
             </div>
         </div>
     </div>
