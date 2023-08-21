@@ -48,6 +48,34 @@
             width: 120px;
             height: 177px;
             background-color: #1E213A;
+
+            .time {
+                display: flex;
+                justify-content: center;
+                margin-top: 1rem;
+                align-items: center;
+                color: #E7E7EB;
+            }
+
+            .icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .temperature {
+                display: flex;
+                justify-content: center;
+                
+                .temp-max {
+                    margin-right: 1rem;
+                    color: #E7E7EB;
+                }
+
+                .temp-min {
+                    color: #A09FB1;
+                }
+            }
         }
     }
 }

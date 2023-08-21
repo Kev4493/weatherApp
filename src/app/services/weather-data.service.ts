@@ -62,7 +62,7 @@ export class WeatherDataService {
 
   callWeatherForecastApi() {
     this.http
-      .get<WeatherForecast>(`https://api.openweathermap.org/data/2.5/forecast?lat=${this.latitude}&lon=${this.longitude}&appid=${this.apiKey}`)
+      .get<WeatherForecast>(`https://api.openweathermap.org/data/2.5/forecast?lat=${this.latitude}&lon=${this.longitude}&appid=${this.apiKey}&lang=de&units=${this.units}`)
       .subscribe({
         next: (res) => {
           this.weatherForecast = res;

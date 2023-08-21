@@ -5,9 +5,16 @@
     </div>
 
     <div class="forecast-cnt">
-        <div *ngFor="let item of weatherData.weatherForecast?.list | slice:0:5" class="forecast">
+        <div class="forecast" *ngFor="let item of weatherData.weatherForecast?.list | slice:0:5">
             <div class="time">
                 {{ item.dt_txt | date:"HH:mm" }} Uhr
+            </div>
+            <div class="icon">
+                <img src="https://openweathermap.org/img/wn/{{ item.weather[0].icon }}@2x.png" alt="">
+            </div>
+            <div class="temperature">
+                <p class="temp-max">{{ item.main.temp_max | number:'1.0-0' }} °C</p>
+                <p class="temp-min">{{ item.main.temp_min | number:'1.0-0' }} °C</p>
             </div>
         </div>
     </div>
