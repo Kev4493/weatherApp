@@ -17,28 +17,36 @@ export class WeatherDataService {
   usersLocation = '';
   cityName: String;
   cityCollection = [];
-  
+
 
   constructor(private http: HttpClient, private firestore: AngularFirestore) { }
 
 
   getWeatherData() {
-
-    this.startWithCity()
-
-    this.http
-      .get<MyWeather>(`https://api.openweathermap.org/data/2.5/weather?q=${this.cityName}&appid=50d3840fffb1eaee4ef1e7f8dcada229&lang=de&units=${this.units}`)
-
-      .subscribe({
-        next: (res) => {
-          this.myWeather = res;
-          console.log('current weatherData: ', this.myWeather);
-        }
-      })
+    this.loadDefaultCity();
+    this.callCurrentWeatherApi();
+    this.callWeatherForecastApi();
   }
 
 
-  startWithCity() {
+  callCurrentWeatherApi() {
+    this.http
+    .get<MyWeather>(`https://api.openweathermap.org/data/2.5/weather?q=${this.cityName}&appid=50d3840fffb1eaee4ef1e7f8dcada229&lang=de&units=${this.units}`)
+    .subscribe({
+      next: (res) => {
+        this.myWeather = res;
+        console.log('current weatherData: ', this.myWeather);
+      }
+    })
+  }
+
+
+  callWeatherForecastApi() {
+    
+  }
+
+
+  loadDefaultCity() {
     if (!this.usersLocation) {
       this.cityName = 'Stuttgart'
     } else {
@@ -51,12 +59,12 @@ export class WeatherDataService {
 
   loadCitysFromDb() {
     this.firestore
-    .collection('citys')
-    .valueChanges({idField: 'documentID'})
-    .subscribe((changes: any) => {
-      console.log('download complete from DB ', changes)
-      this.cityCollection = changes;
-    })
+      .collection('citys')
+      .valueChanges({ idField: 'documentID' })
+      .subscribe((changes: any) => {
+        console.log('download complete from DB ', changes)
+        this.cityCollection = changes;
+      })
   }
 
 
