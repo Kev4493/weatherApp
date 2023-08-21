@@ -68,6 +68,13 @@
             margin-bottom: 2rem;
             cursor: pointer;
 
+            p {
+                display: flex;
+                align-items: center;
+                height: 100%;
+                width: 90%;
+            }
+
             img {
                 display: none;
             }

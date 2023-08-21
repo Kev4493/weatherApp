@@ -52,7 +52,7 @@ export class WeatherDataService {
   loadCitysFromDb() {
     this.firestore
     .collection('citys')
-    .valueChanges()
+    .valueChanges({idField: 'documentID'})
     .subscribe((changes: any) => {
       console.log('download complete from DB ', changes)
       this.cityCollection = changes;

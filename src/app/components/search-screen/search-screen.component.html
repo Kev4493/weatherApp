@@ -5,17 +5,17 @@
     </div>
 
     <div class="input-cnt">
-        <input [(ngModel)]="city.cityName" type="search" placeholder="Search Location">
+        <input [(ngModel)]="city.cityName" (keyup.enter)="addCityToDb()" type="search" placeholder="Search Location">
         <button (click)="addCityToDb()" type="submit">Search</button>
     </div>
 
     <div class="search-history-cnt">
         <div class="ng-cnt" *ngFor="let city of weatherData.cityCollection">
-            <div class="history-city" (click)="changeCity(city.cityName)">
-                <p>{{ city.cityName }}</p>
-                <img src="../../../assets/icons/close-icon.png" alt="">
+            <div class="history-city">
+                <p (click)="changeCity(city.cityName)">{{ city.cityName }}</p>
+                <img (click)="deleteCityFromDb(city.documentID)" src="../../../assets/icons/close-icon.png" alt="">
             </div>
         </div>
     </div>
-    
+
 </div>

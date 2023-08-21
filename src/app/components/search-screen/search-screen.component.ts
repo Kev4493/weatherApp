@@ -35,4 +35,12 @@ export class SearchScreenComponent {
     this.router.navigate(['/']);
   }
 
+
+  deleteCityFromDb(documentID) {
+    this.firestore
+    .collection('citys')
+    .doc(documentID)
+    .delete()
+  }
+
 }
