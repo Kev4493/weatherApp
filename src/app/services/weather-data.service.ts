@@ -53,7 +53,7 @@ export class WeatherDataService {
           this.myWeather = res;
           this.latitude = this.myWeather.coord.lat;
           this.longitude = this.myWeather.coord.lon;
-          console.log('current weatherData: ', this.myWeather);
+          console.log('currentWeatherData: ', this.myWeather);
           this.callWeatherForecastApi();
         }
       })
@@ -77,7 +77,7 @@ export class WeatherDataService {
       .collection('citys')
       .valueChanges({ idField: 'documentID' })
       .subscribe((changes: any) => {
-        console.log('download complete from DB ', changes)
+        // console.log('download complete from DB ', changes)
         this.cityCollection = changes;
       })
   }
