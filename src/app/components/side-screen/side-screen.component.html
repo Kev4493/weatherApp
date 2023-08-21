@@ -3,4 +3,12 @@
         <div class="c-cnt">°C</div>
         <div class="f-cnt">°F</div>
     </div>
+
+    <div class="forecast-cnt">
+        <div *ngFor="let item of weatherData.weatherForecast?.list | slice:0:5" class="forecast">
+            <div class="time">
+                {{ item.dt_txt | date:"HH:mm" }} Uhr
+            </div>
+        </div>
+    </div>
 </div>

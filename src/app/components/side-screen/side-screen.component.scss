@@ -1,7 +1,7 @@
 .side-screen-cnt {
     // width: 70%;
     height: 100vh;
-    padding: 2rem;
+    padding: 2rem 10rem;
     background-color: #100E1D;
 
     .units-cnt {
@@ -20,6 +20,7 @@
             background-color: #E7E7EB;
             font-weight: 600;
             font-size: 18px;
+            cursor: pointer;
         }
 
         .f-cnt {
@@ -34,6 +35,19 @@
             font-weight: 600;
             color: #E7E7EB;
             font-size: 18px;
+            cursor: pointer;
+        }
+    }
+
+    .forecast-cnt {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 4rem;
+
+        .forecast {
+            width: 120px;
+            height: 177px;
+            background-color: #1E213A;
         }
     }
 }
