@@ -12,14 +12,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideAuth,getAuth } from '@angular/fire/auth';
-import { provideDatabase,getDatabase } from '@angular/fire/database';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { provideDatabase, getDatabase } from '@angular/fire/database';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { FormsModule } from '@angular/forms';
+import { MpsToKmphPipe } from './components/pipes/mps-to-kmh.pipe';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,7 @@ import { FormsModule } from '@angular/forms';
     SideScreenComponent,
     StartScreenComponent,
     SearchScreenComponent,
+    MpsToKmphPipe
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,8 @@ import { FormsModule } from '@angular/forms';
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore()),
     AngularFirestoreModule,
-    FormsModule
+    FormsModule,
+    MatProgressBarModule
 
   ],
   providers: [

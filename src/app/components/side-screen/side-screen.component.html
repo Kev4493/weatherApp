@@ -25,13 +25,51 @@
         </div>
         <div class="highlight-content">
             <div class="first-row">
-                <div class="highlight"></div>
-                <div class="highlight"></div>
+
+                <div class="highlight">
+                    <div class="headline">
+                        <p>Wind Speed</p>
+                    </div>
+                    <div class="highlight-information">
+                        {{ weatherData.myWeather?.wind.speed | mpsToKmph | number:'1.0-0' }} km/h
+                    </div>
+                </div>
+
+                <div class="highlight">
+                    <div class="headline">
+                        <p>Humidity</p>
+                    </div>
+                    <div class="highlight-information">
+                        {{ weatherData.myWeather?.main.humidity }} %
+                    </div>
+                    <div class="progress-bar">
+                        <div class="legend">
+                            <span>0</span>
+                            <span>50</span>
+                            <span>100</span>
+                        </div>
+                        <mat-progress-bar color="success" mode="determinate" value="{{ weatherData.myWeather?.main.humidity }}"></mat-progress-bar>
+                    </div>
+                </div>
             </div>
 
             <div class="second-row">
-                <div class="highlight"></div>
-                <div class="highlight"></div>
+                <div class="highlight">
+                    <div class="headline">
+                        <p>Feels Like</p>
+                    </div>
+                    <div class="highlight-information">
+                        {{ weatherData.myWeather?.main.pressure }} °C
+                    </div>
+                </div>
+                <div class="highlight">
+                    <div class="headline">
+                        <p>Air Pressure</p>
+                    </div>
+                    <div class="highlight-information">
+                        {{ weatherData.myWeather?.main.feels_like | number:'1.0-0' }} hPa
+                    </div>
+                </div>
             </div>
 
         </div>

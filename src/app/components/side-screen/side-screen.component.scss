@@ -98,6 +98,46 @@
                     width: 328px;
                     height: 204px;
                     background-color: #1E213A;
+                    padding: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+
+                    .headline {
+                        p {
+                            margin: 0;
+                            font-size: 18px;
+                        }
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #E7E7EB;
+                    }
+
+                    .highlight-information {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #E7E7EB;
+                        font-size: 36px;
+                    }
+
+                    .progress-bar {
+                        .legend {
+                            width: 100%;
+                            display: flex;
+                            justify-content: space-between;
+                            color: #A09FB1;
+                            font-weight: 700;
+                            margin-bottom: 0.25rem;
+                            font-size: 12px;
+                        }
+
+                        .mat-success {
+                            background-color: #E7E7EB;
+                        }
+                    }
                 }
             }
 
@@ -110,6 +150,30 @@
                     width: 328px;
                     height: 204px;
                     background-color: #1E213A;
+                    padding: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+
+                    .headline {
+                        p {
+                            margin: 0;
+                            font-size: 18px;
+                        }
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #E7E7EB;
+                    }
+
+                    .highlight-information {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #E7E7EB;
+                        font-size: 36px;
+                    }
                 }
             }
 
