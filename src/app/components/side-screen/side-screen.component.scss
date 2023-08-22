@@ -1,7 +1,7 @@
 .side-screen-cnt {
     // width: 70%;
     height: 100vh;
-    padding: 2rem 10rem;
+    padding: 3rem 10rem;
     background-color: #100E1D;
 
     .units-cnt {
@@ -42,7 +42,7 @@
     .forecast-cnt {
         display: flex;
         justify-content: space-between;
-        margin-top: 4rem;
+        margin-top: 3rem;
 
         .forecast {
             width: 120px;
@@ -66,7 +66,7 @@
             .temperature {
                 display: flex;
                 justify-content: center;
-                
+
                 .temp-max {
                     margin-right: 1rem;
                     color: #E7E7EB;
@@ -76,6 +76,43 @@
                     color: #A09FB1;
                 }
             }
+        }
+    }
+
+    .highlight-cnt {
+        margin-top: 3rem;
+
+        .highlight-header {
+            h1 {
+                color: #E7E7EB;
+                margin-bottom: 3rem;
+            }
+        }
+
+        .highlight-content {
+            .first-row {
+                display: flex;
+                justify-content: space-between;
+
+                .highlight {
+                    width: 328px;
+                    height: 204px;
+                    background-color: #1E213A;
+                }
+            }
+
+            .second-row {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 3rem;
+                
+                .highlight {
+                    width: 328px;
+                    height: 204px;
+                    background-color: #1E213A;
+                }
+            }
+
         }
     }
 }
