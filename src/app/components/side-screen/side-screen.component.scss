@@ -3,6 +3,9 @@
     height: 100vh;
     padding: 3rem 10rem;
     background-color: #100E1D;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     .units-cnt {
         // border: 1px solid white;
@@ -42,12 +45,15 @@
     .forecast-cnt {
         display: flex;
         justify-content: space-between;
-        margin-top: 3rem;
+        align-items: center;
+        // margin-top: 3rem;
+        height: 100%;
 
         .forecast {
-            width: 120px;
+            width: 165px;
             height: 177px;
             background-color: #1E213A;
+            border-radius: 12px;
 
             .time {
                 display: flex;
@@ -80,7 +86,11 @@
     }
 
     .highlight-cnt {
-        margin-top: 3rem;
+        // margin-top: 3rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
         .highlight-header {
             h1 {
@@ -95,13 +105,14 @@
                 justify-content: space-between;
 
                 .highlight {
-                    width: 328px;
+                    width: 480px;
                     height: 204px;
                     background-color: #1E213A;
                     padding: 1rem;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-around;
+                    border-radius: 12px;
 
                     .headline {
                         p {
@@ -120,7 +131,23 @@
                         justify-content: center;
                         align-items: center;
                         color: #E7E7EB;
-                        font-size: 36px;
+                        height: 75px;
+
+
+                        .data {
+                            margin: 0rem 1rem 0rem 0rem;
+                            font-size: 64px;
+                        }
+
+                        .unit {
+                            font-size: 1.5rem;
+                        }
+                    }
+
+                    .progress-bar-dummy {
+                        width: 296px;
+                        height: 28px;
+                        // border: 1px solid white;
                     }
 
                     .progress-bar {
@@ -145,15 +172,16 @@
                 display: flex;
                 justify-content: space-between;
                 margin-top: 3rem;
-                
+
                 .highlight {
-                    width: 328px;
+                    width: 480px;
                     height: 204px;
                     background-color: #1E213A;
                     padding: 1rem;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-around;
+                    border-radius: 12px;
 
                     .headline {
                         p {
@@ -173,10 +201,60 @@
                         align-items: center;
                         color: #E7E7EB;
                         font-size: 36px;
+                        height: 75px;
+
+                        .data {
+                            margin: 0rem 1rem 0rem 0rem;
+                            font-size: 64px;
+                        }
+
+                        .unit {
+                            font-size: 1.5rem;
+                        }
                     }
                 }
             }
 
+        }
+    }
+}
+
+@media (min-width: 2560px) {
+    .side-screen-cnt {
+        .units-cnt {
+            .c-cnt {
+                width: 70px;
+                height: 70px;
+                font-size: 1.5rem;
+            }
+
+            .f-cnt {
+                width: 70px;
+                height: 70px;
+                font-size: 1.5rem;
+            }
+        }
+
+        .forecast-cnt {
+            .forecast {
+                width: 230px;
+                height: 280px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+                .time {
+                    font-size: 1.5rem;
+                }
+
+                .temperature {
+                    font-size: 1.5rem;
+
+                    .temp-max {
+                        margin-right: 2.5rem;
+                    }
+                }
+            }
         }
     }
 }

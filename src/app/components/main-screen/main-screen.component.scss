@@ -1,7 +1,7 @@
 .main-screen-cnt {
     // width: 30%;
     height: 100vh;
-    padding: 2rem;
+    padding: 3rem;
     position: relative;
     background-size: 601px;
     background-repeat: no-repeat;
@@ -22,15 +22,18 @@
     .content-cnt {
         position: absolute;
         // height: 100vh;
-        top: 2rem;
-        left: 2rem;
-        right: 2rem;
-        bottom: 2rem;
+        top: 3rem;
+        left: 3rem;
+        right: 3rem;
+        bottom: 3rem;
+        display: flex;
+        flex-direction: column;
 
         .button-cnt {
             display: flex;
             align-items: center;
             justify-content: space-around;
+            // height: 40px;
 
 
             button {
@@ -65,7 +68,7 @@
             align-items: center;
             flex-direction: column;
             // border: 1px solid white;
-            margin-top: 2rem;
+            // margin-top: 2rem;
             height: 700px;
 
             .weather-temperature-cnt {
@@ -94,7 +97,7 @@
         }
 
         .footer {
-            margin-top: 2rem;
+            // margin-top: 2rem;
             // border: 1px solid white;
             display: flex;
             flex-direction: column;
@@ -124,14 +127,58 @@
     }
 }
 
-// @media (max-width: 1140px) {
-//     .main-screen-cnt {
-//         .content-cnt {
-//             .button-cnt {
-//                 button {
-//                     width: 140px !important;
-//                 }
-//             }
-//         }
-//     }
-// }
+@media (min-width: 2560px) {
+    .main-screen-cnt {
+        background-size: 1042px;
+
+        .content-cnt {
+            .button-cnt {
+                button {
+                    width: 300px;
+                    height: 70px;
+                    font-size: 1.5rem;
+                }
+
+                .icon-circle {
+                    width: 70px;
+                    height: 70px;
+
+                    .my-location-icon {
+                        width: 40px;
+                    }
+                }
+            }
+
+            .weather-section {
+                height: 1280px;
+
+                .weather-temperature-cnt {
+                    p {
+                        font-size: 200px;
+                    }
+                }
+
+                .weather-name-cnt {
+                    p {
+                        font-size: 3rem;
+                    }
+                }
+            }
+
+            .footer {
+                .date-cnt {
+                    font-size: 1.5rem;
+                }
+                .location-cnt {
+                    img {
+                        width: 30px;
+                    }
+
+                    p {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
