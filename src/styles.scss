@@ -201,6 +201,11 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Raleway';
+    line-height: normal;
+}
+
+p {
+    // line-height: normal;
 }
 
 app-start-screen {
@@ -228,3 +233,17 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mdc-linear-progress__bar-inner {
     border-color: #FFEC65 !important;
   }
+
+@media (max-width: 940px) {
+    app-main-screen {
+        width: 100%;
+    }
+
+    app-side-screen {
+        width: 100%;
+    }
+
+    app-search-screen {
+        width: 100%;
+    }
+}
