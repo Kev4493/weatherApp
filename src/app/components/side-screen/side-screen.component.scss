@@ -233,6 +233,7 @@
 @media (min-width: 2560px) {
     .side-screen-cnt {
         padding: 5rem 10rem;
+
         .units-cnt {
             .c-cnt {
                 width: 70px;
@@ -364,7 +365,7 @@
 @media (max-width: 1400px) {
     .side-screen-cnt {
         padding: 3rem 4rem;
-    }  
+    }
 }
 
 
@@ -380,7 +381,7 @@
     .side-screen-cnt {
         .forecast-cnt {
             .forecast {
-              width: 120px !important;  
+                width: 120px !important;
             }
         }
 
@@ -391,6 +392,7 @@
                         width: 330px !important;
                     }
                 }
+
                 .second-row {
                     .highlight {
                         width: 330px !important;
@@ -407,7 +409,7 @@
     .side-screen-cnt {
         .forecast-cnt {
             .forecast {
-              width: 105px !important;  
+                width: 105px !important;
             }
         }
 
@@ -418,6 +420,7 @@
                         width: 300px !important;
                     }
                 }
+
                 .second-row {
                     .highlight {
                         width: 300px !important;
@@ -439,6 +442,7 @@
                         width: 270px !important;
                     }
                 }
+
                 .second-row {
                     .highlight {
                         width: 270px !important;
@@ -473,6 +477,23 @@
                     justify-content: center;
                     align-items: center;
                     margin-top: 3rem;
+                }
+            }
+
+            .highlight-content {
+                .first-row {
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    column-gap: 2rem;
+                    row-gap: 2rem;
+                }
+
+                .second-row {
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    column-gap: 2rem;
+                    row-gap: 2rem;
+                    margin-top: 2rem;
                 }
             }
         }
@@ -519,7 +540,7 @@
 //             .forecast {
 //                 width: 115px !important;
 //                 height: 155px !important;
-    
+
 //                 .icon {
 //                     img {
 //                         width: 80px !important;

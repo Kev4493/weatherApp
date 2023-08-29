@@ -221,6 +221,21 @@ app-search-screen {
     width: 30%;
 }
 
+/* Verstecke den Scrollbalken */
+::-webkit-scrollbar {
+    width: 0em; /* Breite des Scrollbalkens */
+}
+
+/* Verstecke den Scrollbalken-Track */
+::-webkit-scrollbar-track {
+    background-color: transparent; /* Hintergrundfarbe des Scrollbalken-Tracks */
+}
+
+/* Verstecke den Scrollbalken-Thumb (der bewegliche Teil des Scrollbalkens) */
+::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Farbe des Scrollbalken-Thumbs */
+}
+
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
