@@ -13,7 +13,7 @@
                 <img src="https://openweathermap.org/img/wn/{{weatherData.myWeather?.weather[0].icon}}@2x.png" alt="">
             </div>
             <div class="weather-temperature-cnt">
-                <p>{{weatherData.roundNumber(weatherData.myWeather?.main.temp)}}</p><span>°C</span>
+                <p>{{weatherData.roundNumber(weatherData.myWeather?.main.temp)}}</p><span>{{ weatherData.temperatureSymbol }}</span>
             </div>
             <div class="weather-name-cnt">
                 <p>{{weatherData.myWeather?.weather[0].description}}</p>

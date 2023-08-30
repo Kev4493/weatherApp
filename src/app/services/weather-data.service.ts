@@ -16,8 +16,11 @@ export class WeatherDataService {
   apiKey = '50d3840fffb1eaee4ef1e7f8dcada229'
 
   units = 'metric';
-  unitC;
-  unitF;
+  temperatureSymbol = '°C'
+  speedSymbol = 'm/s'
+  unitC = true;
+  unitF = false;
+  
   latitude: Number;
   longitude: Number;
 

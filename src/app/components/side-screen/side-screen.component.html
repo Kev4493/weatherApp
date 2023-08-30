@@ -13,8 +13,8 @@
                 <img src="https://openweathermap.org/img/wn/{{ item.weather[0].icon }}@2x.png" alt="">
             </div>
             <div class="temperature">
-                <p class="temp-max">{{ item.main.temp_max | number:'1.0-0' }} °C</p>
-                <p class="temp-min">{{ item.main.temp_min | number:'1.0-0' }} °C</p>
+                <p class="temp-max">{{ item.main.temp_max | number:'1.0-0' }} {{ weatherData.temperatureSymbol }}</p>
+                <p class="temp-min">{{ item.main.temp_min | number:'1.0-0' }} {{ weatherData.temperatureSymbol }}</p>
             </div>
         </div>
     </div>
@@ -32,7 +32,7 @@
                         <p>Wind Speed</p>
                     </div>
                     <div class="highlight-information">
-                        <p class="data">{{ weatherData.myWeather?.wind.speed | mpsToKmph | number:'1.0-0' }}</p><span class="unit">km/h</span>
+                        <p class="data">{{ weatherData.myWeather?.wind.speed | number:'1.0-0' }}</p><span class="unit">{{ weatherData.speedSymbol }}</span>
                     </div>
                     <!-- <div class="progress-bar-dummy"></div> -->
                 </div>
@@ -61,7 +61,7 @@
                         <p>Feels Like</p>
                     </div>
                     <div class="highlight-information">
-                        <p class="data">{{ weatherData.myWeather?.main.feels_like | number:'1.0-0'}}</p><span class="unit">°C</span>
+                        <p class="data">{{ weatherData.myWeather?.main.feels_like | number:'1.0-0'}}</p><span class="unit">{{ weatherData.temperatureSymbol }}</span>
                          
                     </div>
                 </div>
