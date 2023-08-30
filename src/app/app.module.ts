@@ -22,6 +22,7 @@ import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { FormsModule } from '@angular/forms';
 import { MpsToKmphPipe } from './components/pipes/mps-to-kmh.pipe';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { NgClass } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     provideFirestore(() => getFirestore()),
     AngularFirestoreModule,
     FormsModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    NgClass
 
   ],
   providers: [
