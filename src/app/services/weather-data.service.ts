@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { MyWeather } from '../models/weather.model';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { WeatherForecast } from '../models/forecast.model';
+import { formatDate } from '@angular/common';
 
 
 @Injectable({
@@ -23,6 +24,8 @@ export class WeatherDataService {
   
   latitude: Number;
   longitude: Number;
+
+  currentDate;
 
   defaultCityName = 'Stuttgart'
   usersLocation = '';
@@ -90,5 +93,11 @@ export class WeatherDataService {
 
   roundNumber(originalNumber) {
     return Math.ceil(originalNumber);
+  }
+
+  getCurrentDate() {
+    const currentDate = new Date();
+    const options = { weekday: 'short', day: 'numeric', month: 'long' };
+    this.currentDate = `Today • ${formatDate(currentDate, 'EEE dd MMMM', 'en-US')}`;
   }
 }

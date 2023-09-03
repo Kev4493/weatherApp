@@ -15,5 +15,6 @@ export class AppComponent {
   ngOnInit() {
     this.weatherData.loadCitysFromDb();
     this.weatherData.getWeatherData();
+    this.weatherData.getCurrentDate()
   }
 }
